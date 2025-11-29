@@ -1,4 +1,4 @@
-<img src="./imgs/next-icon.webp" alt="Next.js icon"/>
+<img src="./imgs/next-js.webp" alt="Next.js icon"/>
 
 # 🚀 Next.js Learning Journey
 
