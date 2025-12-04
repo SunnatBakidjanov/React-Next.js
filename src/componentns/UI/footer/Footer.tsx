@@ -1,8 +1,10 @@
+/* --- Imports --- */
 import { cn } from '@/utils/cn';
 import { MaxWidthContainer } from '../containers/max-width-container/MaxWidthContainer';
 import { SiteNavigation } from '../navs/site-navigation/SiteNavigation';
 import { footerConfig } from './footer-config/footer.config';
 
+/* --- Footer Component --- */
 export const Footer = () => {
 	const { navData, title } = footerConfig;
 

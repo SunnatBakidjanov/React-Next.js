@@ -1,7 +1,7 @@
 /* --- Imports --- */
 import { RacketSelectPage as Page } from '@/pages/racekt-select-page/RacketSelectPage';
 
-/* --- RocketsPage Component --- */
+/* --- RacketSelectPage --- */
 const RacketSelectPage = () => {
 	return <Page />;
 };

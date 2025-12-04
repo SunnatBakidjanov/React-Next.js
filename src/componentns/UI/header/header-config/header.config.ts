@@ -1,7 +1,9 @@
+import { racketsUrl } from '@/utils/urls';
+
 // Статичный список навигации
 export const navData = [
 	{ text: 'Главная', href: '/' },
-	{ text: 'Ракетки', href: '/rackets' },
+	{ text: 'Ракетки', href: racketsUrl },
 ];
 
 // Конфигурация шапки сайта
