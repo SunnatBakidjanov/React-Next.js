@@ -1,5 +1,5 @@
 /* --- Imports --- */
-import { RacketSelectPage as Page } from '@/pages/racekt-select-page/RacketSelectPage';
+import { RacketSelectPage as Page } from '@/UI-pages/racekt-select-page/RacketSelectPage';
 
 /* --- RacketSelectPage --- */
 const RacketSelectPage = () => {

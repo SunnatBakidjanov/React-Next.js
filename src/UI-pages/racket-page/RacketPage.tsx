@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import { useParams } from 'next/navigation';
 import { rackets } from '@/mock/mock';
 import { MaxWidthContainer } from '@/componentns/UI/containers/max-width-container/MaxWidthContainer';
 import { Title } from '@/componentns/UI/title/Title';
@@ -9,10 +8,9 @@ import { ListItem } from './UI/list-item/ListItem';
 import { pageConfig } from './page-config/page.config';
 import { cn } from '@/utils/cn';
 
-export const RacketPage = () => {
-	const params = useParams<{ id: string }>();
-	const racket = rackets.find(r => r.id === Number(params?.id));
-	const { specsNav } = pageConfig;
+export const RacketPage = ({ id }: { id: string }) => {
+	const racket = rackets.find(r => r.id === Number(id));
+	const { specsNav, basketBtn } = pageConfig;
 
 	if (!racket) return <p className="text-center py-10">Racket not found</p>;
 
@@ -23,7 +21,7 @@ export const RacketPage = () => {
 			<div className="flex flex-col lg:flex-row gap-10 py-10">
 				<div className="flex-1 flex flex-col items-center justify-center">
 					<div className="relative w-full max-w-md h-[450px] rounded-xl overflow-hidden shadow-lg">
-						<Image src={imageUrl} fill alt={name} className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
+						<Image src={imageUrl} fill alt={name} className="object-contain" sizes="(max-width: 768px) 100vw, 50vw" loading="eager" />
 					</div>
 
 					<h2 className="text-2xl font-semibold mt-4 text-center">{name}</h2>
@@ -35,7 +33,7 @@ export const RacketPage = () => {
 					<p className="text-gray-600 text-lg">{description}</p>
 
 					<ul className="space-y-3">
-						{specsNav(racket.id).map(({ name, value }) => (
+						{specsNav(racket).map(({ name, value }) => (
 							<ListItem key={name} specs={name} text={String(value)} />
 						))}
 					</ul>
@@ -53,7 +51,7 @@ export const RacketPage = () => {
 							'hover:bg-sky-600 focus-visible:bg-sky-600'
 						)}
 					>
-						В корзину
+						{basketBtn}
 					</button>
 				</div>
 			</div>
