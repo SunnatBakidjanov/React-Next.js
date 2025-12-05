@@ -1,5 +1,5 @@
 /* --- Imports --- */
-import Layout from '@/componentns/layouts/root-layout/RootLayout';
+import { RootLayout as Layout } from '@/componentns/layouts/root-layout/RootLayout';
 import '@styles/globals.css';
 
 /* --- RootLayout --- */
