@@ -24,7 +24,7 @@ export const RacketPage = ({ id }: { id: string }) => {
 						<Image src={imageUrl} fill alt={name} className="object-contain" sizes="(max-width: 768px) 100vw, 50vw" loading="eager" />
 					</div>
 
-					<h2 className="text-2xl font-semibold mt-4 text-center">{name}</h2>
+					<Title className="text-2xl font-semibold mt-4 text-center" text={name} />
 				</div>
 
 				<div className="flex-1 space-y-6 text-center">
