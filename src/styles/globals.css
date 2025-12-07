@@ -1,0 +1,17 @@
+@import 'tailwindcss';
+
+:root {
+	--primary-color: #1f1f1f;
+	--accent-color: #475569;
+	--bg-primary: #dfdfdf;
+	--bg-accent: #f3f3f3;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: var(--bg-primary);
+}
+
+*:focus {
+	outline: none !important;
+}
